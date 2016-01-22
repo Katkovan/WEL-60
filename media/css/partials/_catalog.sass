@@ -1,0 +1,388 @@
+@import variables
+
+=small_button
+  display: block
+  font-family: $font-0
+  box-sizing: border-box
+  width: 83px
+  margin: 9px 0
+  padding: 10px 0
+  font-size: 16px
+  text-align: center
+  +block-secondary
+
+=small_button__hover
+  +block-secondary-hover
+
+=small_button__focus
+  outline: none
+  +block-secondary-active
+
+
+$catalog-list-item-width: 210px
+
+.catalog-items-list
+  width: 100%
+  float: left
+  padding: 20px 0px
+
+.products-set
+  width: 100%
+  float: left
+
+.catalog-product
+  display: block
+  width: $catalog-list-item-width
+  margin-right: round(($r-content-width - 3*$catalog-list-item-width - 1)/2)
+  float: left
+  &.last
+    margin-right: 0
+    float: right
+  .product-link
+    display: block
+  .product-image-wrapper
+    width: $catalog-list-item-width
+    height: 150px
+    margin-bottom: 18px
+    .product-image
+      width: $catalog-list-item-width
+      height: 122px
+      display: table-cell
+      text-align: center
+      vertical-align: middle
+      img
+        max-width: 100%
+        border-radius: 6px
+  .product-title
+    color: $color-link
+    font-size: 16px
+    line-height: 1.4
+    padding-bottom: 10px
+  .product-short-desc
+    font-size: 12px
+    color: $color-text
+    white-space: normal
+  .product-price
+    padding: 12px 0 3px
+    font-size: 22px
+    color: $color-link
+  .small-butt
+    +small_button
+    &:hover
+      +small_button__hover
+    &:active
+      +small_button__focus
+
+
+
+$product-detail-side-l: 315px
+$product-detail-gutter: 32px
+$product-detail-side-r: $r-content-width - $product-detail-gutter - $product-detail-side-l
+
+.product-detail
+  &.side-l
+    width: $product-detail-side-l
+    float: left
+  &.side-r
+    width: $product-detail-side-r
+    float: right
+  .product-price
+    padding: 8px 0
+    font-size: 28px
+    color: $color-text
+    float: left
+  form.buy-product
+    float: right
+  button.buy-product
+    font-size: 20px
+    padding: 11px 25px
+    line-height: 1
+    margin-top: 5px
+    +block-secondary
+    &:hover
+      +block-secondary-hover
+    &:active
+      +block-secondary-active
+
+  .product-detail-images
+    width: 100%
+    float: left
+    .big, .small
+      float: left
+      width: 100%
+      a
+        display: block
+        float: left
+        img
+          border-radius: 6px
+    .big
+      margin-bottom: 25px
+    .small
+      a
+        width: ($product-detail-side-l - 15px)/3
+        &.first
+          margin-right: 7px
+        &.last
+          float: right
+      .product_images_slider-item
+        a
+          width: ($product-detail-side-l - 15px)/3 - 20
+          &.first
+            margin-right: 10px
+
+
+
+
+.product_images_slider
+  float: left
+  box-sizing: border-box
+  width: $product-detail-side-l
+  height: 90px
+  background: $color-background
+  border-radius: 6px
+  border: 1px solid $big-blok-color-1
+  position: relative
+  .product_images_slider-viewport
+    width: 260px
+    padding: 0px 10px
+    height: 60px
+    margin: 14px auto 0
+    border-radius: 6px
+    overflow: hidden
+  .product_images_slider-item
+    overflow: hidden
+    padding: 0px 10px
+    white-space: nowrap
+    background: $color-background
+  .product_images_slider-prev, .product_images_slider-next
+    position: absolute
+    z-index: 100
+    top: 38px
+    width: 8px
+    height: 12px
+    cursor: pointer
+
+  .product_images_slider-prev
+    left: 9px
+    background: url("#{$MEDIA_PATH}images/side_menu-nav_left.png")
+
+  .product_images_slider-next
+    right: 9px
+    background: url("#{$MEDIA_PATH}images/side_menu-nav.png")
+
+.product-detail-features
+  width: 100%
+  float: left
+  color: $color-text
+  border-top: 1px solid
+  caption
+    font-size: 24px
+    text-align: left
+    line-height: 1
+    padding: 16px 0px
+    border-bottom: 1px solid
+  tr
+    td
+      font-size: 12px
+      border-top: 1px solid transparentize($color-text, 0.8)
+      padding: 9px 0px 9px
+      &:first-child
+        width: 260px
+    &:first-child
+      td
+        border: none
+
+a.catalog-subdir-link
+  color: $color-text
+  position: relative
+  display: block
+  float: left
+  h2
+    color: $big-blok-color-1
+    margin: 0
+    padding: 0
+    font-size: 24px
+    float: left
+  span
+    display: block
+    float: left
+    color: $color-background
+    margin-top: -2px
+    border-radius: 28px
+    padding: 6px 15px 3px
+    margin-left: 10px
+    font-size: 16px
+    background: $color-link
+  &:hover
+    h2
+      color: $color-link-hover
+    span
+      background: $color-link-hover
+
+
+$filter-gray: #d7d7d7
+
+=filter_input
+  box-sizing: border-box
+  font-size: 14px
+  color: $color-text
+  line-height: 1
+  padding: 9px 5px 11px
+  border: 1px solid $filter-gray
+  background: $color-background
+  border-radius: 6px
+  &:focus
+    outline: none
+    border: 1px solid $small-blok-color-1
+
+.catalog_filter
+  box-sizing: border-box
+  width: 100%
+  float: left
+  border-radius: 6px
+  border: 1px solid $filter-gray
+  padding: 10px 15px
+  box-shadow: 0 3px 0 0 $filter-gray
+  .taitle
+    font-size: 24px
+    color: $color-text
+    padding: 10px 0px 15px
+    width: 100%
+    float: left
+  .catalog_filter_widget
+    width: 100%
+    float: left
+    padding-bottom: 14px
+    .label
+      font-size: 14px
+      color: $color-text
+      font-weight: 500
+      padding-bottom: 0.5em
+    &.checkbox
+      input
+        display: none
+        &:checked + label:after
+          content: ""
+      label
+        position: relative
+        color: $color-text
+        padding: 10px 0px 12px 32px
+        box-sizing: border-box
+        width: 100%
+        float: left
+        word-break: break-word
+        font-size: 14px
+        &:before
+          position: absolute
+          left: 0px
+          top: 6px
+          content: ""
+          width: 24px
+          height: 24px
+          +filter_input
+        &:after
+          content: none
+          position: absolute
+          top: 12px
+          left: 5px
+          width: 14px
+          height: 13px
+          background: url("#{$MEDIA_PATH}images/checkbox_checked.png") no-repeat
+    &.fader_double
+      .sep
+        background: $filter-gray
+        float: left
+        width: 8px
+        height: 2px
+        margin: 19px 0px 0px 7px
+      .trackbar
+        display: none
+        width: 100%
+        height: 5px
+        margin: 13px 0 19px
+        box-sizing: border-box
+        position: relative
+        border: 1px solid $filter-gray
+        background: $color-background
+        .ui-slider-range
+          position: absolute
+          height: 5px
+          background: $small-blok-color-1
+          top: -1px
+        a.ui-slider-handle
+          display: block
+          cursor: pointer
+          position: absolute
+          width: 3px
+          height: 19px
+          top: -8px
+          background: $small-blok-color-1
+          outline: none
+      input
+        +filter_input
+        text-align: center
+        float: left
+        width: 78px
+        &.max
+          position: relative
+          float: right
+
+
+  .filter-found
+    width: 100%
+    box-sizing: border-box
+    float: left
+    font-size: 11px
+    text-align: center
+    padding: 10px 5px 9px
+    position: relative
+    margin-bottom: 13px
+    background: transparentize($small-blok-color-0, 0.7)
+    color: transparentize($color-text, 0.4)
+    &:after
+      position: absolute
+      content: ""
+      bottom: -7px
+      left: 50%
+      border:
+        top: 7px solid transparentize($small-blok-color-0, 0.7)
+        left: 7px solid transparent
+        right: 7px solid transparent
+  button[type="submit"]
+    font-size: 16px
+    line-height: 1
+    width: 100%
+    padding: 11px 10px 10px
+    float: left
+    display: block
+    margin: 2px 0px 12px
+    +block-secondary
+    &:hover
+      +block-secondary-hover
+    &:active
+      +block-secondary-active
+  a.reset-form, .reset-form
+    display: block
+    font-size: 14px
+    color: $color-text
+    float: left
+    width: 100%
+    padding-bottom: 6px
+    opacity: 0.5
+    text-decoration: none
+    text-align: center
+    span
+      border-bottom: 1px dashed
+    &:hover
+      opacity: 1
+      span
+        border: none
+
+.product-description-title
+  float: left
+  width: 100%
+  font-size: 18px
+  color: $big-blok-color-1
+  padding-bottom: 5px
+  border-bottom: 1px solid
+  margin-bottom: 10px

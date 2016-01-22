@@ -1,0 +1,409 @@
+@import variables
+
+.main-content-l
+  float: left
+  width: $l-content-width
+  min-height: 100px
+
+
+.main-content-r
+  float: left
+  width: $r-content-width
+  min-height: 100px
+  padding-left: $content-sep
+  .butt
+    position: relative
+    float: left
+    width: 127px
+    display: block
+    font-size: 14px
+    text-decoration: none
+    text-align: center
+    border: none
+    line-height: 1
+    padding: 13px 0
+    outline: none
+    +block-secondary
+    &:hover
+      +block-secondary-hover
+    &:active
+      +block-secondary-active
+  .contacts_map
+    position: relative
+    width: $r-content-width
+    height: $r-content-width/2
+    float: left
+    margin: 14px auto
+    .butt.center-map
+      cursor: pointer
+      display: none
+      position: absolute
+      z-index: 100
+      width: 100px
+      top: 61px
+      right: 6px
+      -webkit-box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px
+      box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px
+
+    #map-inner
+      width: $r-content-width
+      height: $r-content-width/2
+      .mapa-labels
+        display: none
+        color: $color-background
+        background-color: $small-blok-color-1
+        font-family: $font-0
+        font-size: 12px
+        padding: 4px 7px 5px
+
+
+.breadcrumbs
+  width: $r-content-width
+  margin-left: $content-sep+$l-content-width
+  font-size: 13px
+  color: transparentize($color-text,0.1)
+  a
+    color: $color-link
+    &:hover
+      color: $color-link-hover
+  .slh
+    padding: 0px 0.3em
+
+.tmce
+  font-family: $font-0
+  color: $color-text
+  font-size: 13px
+  line-height: 1.4
+  h1, h2, h3, h4, h5, h6
+    color: $color-h
+    line-height: 1.2em
+    margin-bottom: 0.5em
+    font-weight: normal
+  h1
+    font-size: 24px
+  h2
+    font-size: 21px
+  h3
+    font-size: 18px
+  h4
+    font-size: 15px
+  h5
+    font-size: 14px
+  h6
+    font-size: 14px
+
+  p
+    padding-bottom: 1em
+  strong
+    font-weight: 600
+  ul
+    li
+      font-size: 13px
+      padding-left: 16px
+      position: relative
+      padding-bottom: 20px
+      &:before
+        content: ""
+        width: 7px
+        height: 7px
+        border-radius: 5px
+        background: $color-link
+        position: absolute
+        left: 0px
+        top: 6px
+  blockquote
+    margin: 0px
+    display: block
+    position: relative
+    font-size: 16px
+    font-style: italic
+    line-height: 28px
+    padding:
+      top: 1em
+      bottom: 1em
+      right: 2em
+      left: 37px
+    &:before
+      position: absolute
+      display: block
+      content: ""
+      background: url("#{$MEDIA_PATH}images/block_quote_start.png") no-repeat
+      width: 21px
+      height: 20px
+      left: 0px
+      top: 19px
+    &:after
+      content: ""
+      position: absolute
+      display: block
+      background: url("#{$MEDIA_PATH}images/block_quote_end.png") no-repeat
+      width: 21px
+      height: 19px
+      bottom: 40px
+      right: 0px
+  ol
+    list-style: decimal
+    list-style-position: outside
+    li
+      font-size: 14px
+      margin-left: 19px
+      padding-bottom: 20px
+  ol, ul
+    padding-bottom: 0.5em
+  table
+    border-collapse: collapse
+
+
+=sep
+  &:after
+    position: absolute
+    content: ""
+    width: 1px
+    height: 22px
+    background: $color-background
+    left: 0px
+    top: 6px
+
+=sep_disable
+  &:after
+    visibility: hidden
+
+=pagination_icon
+  position: absolute
+  content: ""
+  width: 10px
+  height: 16px
+  top: 3px
+
+.pagination
+  width: 100%
+  margin: 20px 0
+  font-size: 13px
+  box-sizing: border-box
+  float: left
+  text-align: center
+  height: 49px
+  padding: 15px 0px 13px
+  background: $big-blok-color-1
+  +gradient_top($big-blok-color-0,$big-blok-color-1)
+  border-radius: 5px
+  a.to-start, a.to-end
+    position: relative
+    display: block
+    float: left
+    text-align: right
+    text-decoration: none
+    color: $color-background
+    width: 106px
+    &.disabled
+      opacity: 0.5
+  a.to-start
+    &:before
+      +pagination_icon
+      background: url("#{$MEDIA_PATH}images/side_menu-nav_hover_left.png") no-repeat
+      left: 40px
+  a.to-end
+    text-align: left
+    float: right
+    &:after
+      +pagination_icon
+      background: url("#{$MEDIA_PATH}images/side_menu-nav_hover.png") no-repeat
+      right: 35px
+  .nav-item
+    position: relative
+    display: inline
+    line-height: 1
+    white-space: nowrap
+    &.num, &.etc
+      color: $color-background
+      text-decoration: none
+    &.etc
+      padding: 9px 7px 9px 9px
+      +sep
+    &.num
+      color: $color-background
+      padding: 9px 13px
+      border-radius: 6px
+      margin-right: -1px
+      +sep
+      &.first
+        +sep_disable
+      &:hover, &.active
+        padding: 8px 12px
+        border: 1px solid $color-background
+        +sep_disable
+        & + .num
+          +sep_disable
+        & + .etc
+          +sep_disable
+
+.list-controls
+  width: 100%
+  float: left
+  padding: 16px 0 16px
+  border-top: 5px solid $borders-1
+  border-bottom: 5px solid $borders-1
+  .list-sort
+    width: $r-content-width - 500px
+    float: left
+    .sort-name
+      position: relative
+      font-size: 14px
+      float: left
+      color: $color-text
+      padding-bottom: 15px
+      margin-bottom: -15px
+      &:hover
+        .select-sort
+          background: $big-blok-color-1
+          color: $color-background
+          span
+            border: none
+        .sort-menu
+          display: block
+      .select-sort
+        color: $color-link
+        padding: 7px 10px 9px
+        border-radius: 4px 4px 0px 0px
+        span
+          border-bottom: 1px dashed
+      .sort-menu
+        display: none
+        left: 0px
+        top: 23px
+        position: absolute
+        padding: 10px
+        background: $big-blok-color-1
+        border-radius: 4px 0px 4px 4px
+        a
+          display: block
+          float: left
+          box-sizing: border-box
+          width: 100%
+          text-decoration: none
+          color: $color-background
+          font-size: 14px
+          padding: 7px 5px 5px
+          border-bottom: 1px solid lighten($big-blok-color-0, 15)
+          &:first-child
+            padding-top: 0px
+  .list-per-page
+    width: 500px
+    float: right
+    text-align: right
+    span
+      font-size: 14px
+    a
+      position: relative
+      display: inline
+      font-size: 14px
+      line-height: 1
+      padding: 7px 0px 7px
+      border-radius: 6px
+      white-space: nowrap
+      &.num
+        padding: 7px 11px 7px
+        color: $color-text
+        text-decoration: none
+        margin-right: -2px
+        &:before
+          position: absolute
+          content: ""
+          left: -1px
+          top: 9px
+          width: 1px
+          height: 12px
+          background: $color-text
+        &.first:before
+          content: none
+      &.num:hover
+        color: $color-background
+        +block-primary-hover
+        &:before
+          content: none
+        & + .num:before
+          content: none
+      &.num.active
+        color: $color-background
+        +block-primary
+        &:before
+          content: none
+        & + .num:before
+          content: none
+      &.show-all
+        margin-left: 7px
+        color: $color-link
+
+
+.announce_widget
+  width: $l-content-width
+.announce_widget, .news_widget
+  min-height: 10px
+  position: relative
+  float: left
+  .title
+    float: left
+    width: 100%
+    font-size: 24px
+    color: $color-text
+  .item
+    float: left
+    width: 100%
+    padding: 36px 0 2px
+    a
+      font-size: 14px
+      display: block
+      float: left
+      line-height: 1.4
+      padding-bottom: 1em
+    .short-desc
+      width: 100%
+      font-size: 13px
+      line-height: 1.4
+      float: left
+      color: $color-text
+    .date
+      width: 100%
+      float: left
+      padding-top: 17px
+      font-size: 12px
+      color: lighten($color-text, 20)
+  .all-announces
+    display: block
+    float: left
+    margin-top: 25px
+  .all-news
+    position: absolute
+    top: 0px
+    right: 0px
+
+.index-text
+  float: left
+  width: 570px
+  min-height: 10px
+  padding-right: 35px
+
+.news_widget
+  width: $main-content-width - 605px
+  .item
+    padding: 13px 0 2px
+
+.small-gray-button, a.small-gray-button
+  font-size: 12px
+  color: $big-blok-color-1
+  border-radius: 4px
+  line-height: 1
+  padding: 8px 12px
+  background: $color-background
+  border: 1px solid $big-blok-color-1
+  text-decoration: none
+  &:hover
+    color: $color-background
+    background: $big-blok-color-1
+  &:active
+    color: $color-background
+    background: $big-blok-color-0
+    box-shadow: inset 0 2px 5px 0px transparentize($big-blok-color-1,0.5)
+  &.show-all-products
+    display: block
+    float: right

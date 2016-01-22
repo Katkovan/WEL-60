@@ -1,0 +1,112 @@
+@import variables
+
+$top-menu-height: 53px
+$top-menu-item-hor-padding: 31px
+$hc-height: 119px
+$hc-left: 340px
+
+.header-placeholder
+  width: 100%
+  height: $top-menu-height
+  clear: both
+
+.header
+  width: 100%
+  min-width: $main-content-width
+  background: $small-blok-color-1
+  background: transparentize($small-blok-color-1,0.2)
+  position: fixed
+  top: 0px
+  left: 0px
+  z-index: 499
+  .header-wrapper
+    width: $main-content-width
+    margin: 0 auto
+    .top-menu
+      width: 780px
+      height: $top-menu-height
+      float: left
+      .top-menu-item
+        float: left
+        position: relative
+        box-sizing: border-box
+        height: $top-menu-height
+        display: block
+        line-height: 1
+        padding: 19px $top-menu-item-hor-padding 19px
+        color: $color-background
+        font-family: $font-0
+        font-size: 14px
+        font-weight: normal
+        font-style: normal
+        text-decoration: none
+        text-transform: none
+        transition: background 200ms
+        &:first-child
+          margin-left: -$top-menu-item-hor-padding
+          &:after
+            content: none
+        &:hover
+          background: $color-link
+        &.active
+          background: $color-link
+          font-weight: 600
+    .header-feedback-button
+      float: right
+      font-size: 14px
+      margin-top: 9px
+      padding: 10px 21px
+      +basic-button
+      color: $color-background
+      border-color: $color-background
+      &:hover
+        background: $color-link
+      &:active
+        background: $color-link-hover
+
+
+
+.header-contacts
+  width: $main-content-width
+  margin: 0 auto
+  padding-top: 27px
+  height: $hc-height - 27px
+  .hc-ico
+    display: block
+    width: 49px
+    height: 49px
+    background-repeat: no-repeat
+    padding-right: 20px
+    &.phone
+      background-image: url("#{$MEDIA_PATH}images/icon-phone.png")
+    &.email
+      background-image: url("#{$MEDIA_PATH}images/icon-mail.png")
+  .hc-company-logo
+    display: block
+    float: left
+    width: 156px
+    height: 66px
+    margin-right: $hc-left - 156px
+    background: url("#{$MEDIA_PATH}images/company_logo.png") no-repeat
+  .hc-inner
+    float: left
+    height: 49px
+    padding-top: 10px
+    width: $main-content-width - $hc-left
+    table
+      //width: $r-content-width
+      td
+        font-family: $font-0
+        color: $color-link
+        text-align: left
+        vertical-align: middle
+        &.tmce
+          width: 219px
+          padding-right: 20px
+        a
+          font-size: 20px
+          text-decoration: none
+          color: $color-link
+        //&.hc-phone, &.hc-email
+
+

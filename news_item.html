@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="ru"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8 ie7" lang="ru"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9" lang="ru"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="ru"> <!--<![endif]-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="shortcut icon" href="http://welss.ru/media/images/favicon.ico">
+
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300italic,300,100italic,100,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" media="screen" href="./media/css/style.css" charset="utf-8">
+    <link rel="stylesheet" media="screen" href="./media/fancybox/jquery.fancybox-1.3.4.css">
+
+    <script type="text/javascript" src="./media/js/vendor/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="./media/js/vendor/jquery.touchslider.js"></script>
+    <script type="text/javascript" src="./media/js/vendor/masked_input.js"></script>
+    <script type="text/javascript" src="./media/js/vendor/jquery-ui-1.8.23.custom.min.js" ></script>
+    <script type="text/javascript" src="./media/js/vendor/jquery.ui.touch.js" ></script>
+    <script type="text/javascript" src="./media/js/vendor/select2/select2.js" ></script>
+    <script type="text/javascript" src="./media/js/vendor/select2/select_2_locale.ru.js" ></script>
+    <script type="text/javascript" src="./media/js/input_delay.js"></script>
+    <script type="text/javascript" src="./media/js/modals.js"></script>
+    <script type="text/javascript" src="./media/js/forms.js"></script>
+    <script type="text/javascript" src="./media/js/filter_widget.js"></script>
+    <script type="text/javascript" src="./media/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+    <script type="text/javascript" src="./media/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+
+
+    <title>Продукция WELSS в клубмаркетах &quot;Смартори&quot;!</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+</head>
+
+<body>
+    <a style="display: none" href="" class="modal-backdrop" id="feedback-backdrop"></a>
+    <div class="modal-window" id="feedback-popup" style="display: none">
+        <div class="inner">
+            <a href="" class="close-it">&#215;</a>
+            <div class="tmce"></div>
+            <div class="form">
+                <div class="form-title">Написать нам</div>
+                <form remote="true" enctype="multipart/form-data" action='/kontakty/' method="post">
+                    <input type='hidden' name='csrfmiddlewaretoken' value='' />
+                    <input type="hidden" name="show_form" value="True" required>
+                    <input type="hidden" id="check" name="name" value="imbot" required>
+                    <div class="row">
+                        <input value="" placeholder="Имя" name="eman" />
+                    </div>
+                    <div class="row right">
+                        <input value="" placeholder="E-mail" name="email" />
+                    </div>
+                    <div class="row full">
+                        <textarea name="message" placeholder="Сообщение"></textarea>
+                    </div>
+                    <div class="cb"></div>
+                    <button class="butt">Отправить</button>
+                    <div class="required">Все поля являются обязательными</div>
+                    <div class="cb"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="main-content-wrapper">
+        <div class="pattern-fill">
+            <div class="header-placeholder"></div>
+            <div class="header">
+                <div class="header-wrapper">
+                    <div class="top-menu">
+                        <a href="/" class="top-menu-item">Главная</a>
+                        <a href="/o-kompanii/" class="top-menu-item">О компании</a>
+                        <a href="/novosti/" class="top-menu-item active">Новости</a>
+                        <a href="/kontakty/" class="top-menu-item">Контактная информация</a>
+                    </div>
+                    <a id="show_form-header" class="header-feedback-button" href="/kontakty/?show_form=true">Обратная связь</a>
+                    <div class="cb"></div>
+                </div>
+            </div>
+            <div class="header-contacts">
+                <a href="/" class="hc-company-logo"></a>
+                <div class="hc-inner">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="hc-phone">
+                                    <div class="hc-ico phone"></div>
+                                </td>
+                                <td class="tmce">
+                                    <a href="tel:+7 (495) 617-60-33">+7 (495) 617-60-33</a>
+                                </td>
+                                <td class="hc-email">
+                                    <div class="hc-ico email"></div>
+                                </td>
+                                <td class="tmce">
+                                    <a href="mailto:info@welss.ru">info@welss.ru</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="cb"></div>
+                </div>
+                <div class="cb"></div>
+            </div>
+            <div class="wrap">
+                <div class="cb-40"></div>
+                <div class="cb"></div>
+            </div>
+        </div>
+        <div class="wrap">
+            <div class="cb" style="height: 70px;"></div>
+            <div class="breadcrumbs">
+                <a href="/" title="Главная страница">Главная страница</a>
+                <span class="slh">/</span>
+                <a href="/novosti/" title="Новости">Новости</a>
+                <span class="slh">/</span>
+                <span class="last">Продукция WELSS в клубмаркетах &quot;Смартори&quot;!</span>
+            </div>
+            <div class="cb"></div>
+            <div class="uptolike-container">
+            </div>
+            <div class="main-content">
+                <div class="cb" style="height: 30px;"></div>
+                <div class="main-content-l">
+                    <div class="tree-menu side-menu">
+                        <a class="menu-item lvl0" href="/uhod-za-licom/">
+                Уход за лицом
+            </a>
+                        <a class="menu-item lvl0" href="/uhod-za-telom/">
+                Уход за телом
+            </a>
+                        <a class="menu-item lvl0" href="/uhozhennye-nozhki/">
+                Ухоженные ножки
+            </a>
+                        <a class="menu-item lvl0" href="/roskoshnye-volosy/">
+                Роскошные волосы
+            </a>
+                        <a class="menu-item lvl0" href="/kosmetika/">
+                Косметика
+            </a>
+                        <a class="menu-item lvl0" href="/zdorove/">
+                Здоровье
+            </a>
+                    </div>
+                </div>
+                <div class="main-content-r tmce">
+                    <h2>Продукцию компании WELSS теперь можно приобрести в клубмаркетах "Смартори" по адресам:</h2>
+                    <p class="MsoNormal">Москва, Ленинградское шоссе д.112 корп.1</p>
+                    <p>Москва, поселение Сосненское ,23 ий километр Калужского шоссе, домовладение 14,стр.3</p>
+                    <p class="MsoNormal"><img src="./media/uploads/%D1%81%D0%BC%D0%B0%D1%80%D1%82%D0%BE%D1%80%D0%B8_2.jpg" alt="" width="700" height="436" /></p>
+                    <p class="MsoNormal"><img src="./media/uploads/%D1%81%D0%BC%D0%B0%D1%80%D1%82%D0%BE%D1%80%D0%B8_3.jpg" alt="" width="700" height="613" /></p>
+                    <p class="MsoNormal">Подробная информация о "Смартори" <a href="http://smartory.club/" target="_blank">здесь</a>.</p>
+                    <div class="cb"></div>
+                    <div class="blog-detail-bottom">
+                        <div class="blog-date">Jan. 19, 2016</div>
+                        <a class="baklink" href="/novosti/">← к списку новостей</a>
+                    </div>
+                </div>
+            </div>
+            <div class="cb"></div>
+        </div>
+        <div class="cb"></div>
+        <div class="pax"></div>
+    </div>
+    <div class="footer">
+        <div class="footer-wrap">
+            <div class="bottom-menu">
+                <a href="/" class="bottom-menu-item">Главная</a>
+                <div class="cb"></div>
+                <a href="/sitemap-html/" class="bottom-menu-item">Карта сайта</a>
+                <div class="cb"></div>
+                <a href="/o-kompanii/" class="bottom-menu-item">О компании</a>
+                <div class="cb"></div>
+                <a href="/novosti/" class="bottom-menu-item">Новости</a>
+                <div class="cb"></div>
+                <a href="/kontakty/" class="bottom-menu-item">Контактная информация</a>
+                <div class="cb"></div>
+                <div class="cb"></div>
+            </div>
+            <div class="catalog-popular">
+                <div class="taitle">Популярные категории</div>
+                <div class="menu-item-handle">
+                    <a href="/uhod-za-licom/" class="bottom-menu-item">Уход за лицом</a>
+                </div>
+                <div class="menu-item-handle">
+                    <a href="/uhod-za-telom/" class="bottom-menu-item">Уход за телом</a>
+                </div>
+                <div class="cb"></div>
+                <div class="menu-item-handle">
+                    <a href="/uhozhennye-nozhki/" class="bottom-menu-item">Ухоженные ножки</a>
+                </div>
+                <div class="menu-item-handle">
+                    <a href="/roskoshnye-volosy/" class="bottom-menu-item">Роскошные волосы</a>
+                </div>
+                <div class="cb"></div>
+                <div class="menu-item-handle">
+                    <a href="/kosmetika/" class="bottom-menu-item">Косметика</a>
+                </div>
+                <div class="menu-item-handle">
+                    <a href="/zdorove/" class="bottom-menu-item">Здоровье</a>
+                </div>
+                <div class="cb"></div>
+            </div>
+            <div class="footer-developers">
+                <div class="copy">© 2015 Welss</div>
+                <a class="footer-dev-logo" href="http://www.simplemedia.ru">
+                    <img src="./media/images/dev-logo.png">
+                </a>
+                <a href="http://www.simplemedia.ru/sozdanie-internet-magazina/">
+                Создание интернет-магазина
+            </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+@import variables
+
+$some-width: ($main-content-width/3*10 - ($main-content-width/3*10)%10)/10
+$bottom-menu-width: 250px
+$footer-padding-top: 57px
+
+=bottom_menu_item
+  float: left
+  display: block
+  font-size: 12px
+  text-decoration: none
+  transition: background 200ms, color 200ms
+  padding: 2px 5px
+  border-radius: 5px
+  margin-bottom: 14px
+  margin-left: -5px
+  &:hover
+    color: $color-background
+    background: $color-link
+  &.active
+    color: $color-background
+    background: $color-link
+    font-weight: bold
+.footer
+  min-height: $footer_height
+  width: 100%
+  min-width: $main-content-width
+  margin-top: -$footer_height
+  background: url("#{$MEDIA_PATH}images/patt.png")
+  position: relative
+  overflow-y: hidden
+  &:before
+    content: ""
+    position: absolute
+    z-index: 1
+    width: 900px
+    height: 0px
+    top: 0px
+    margin-left: -450px
+    left: 50%
+    box-shadow: 0px 0px 27px 5px black
+  .footer-wrap
+    box-sizing: border-box
+    min-height: $footer_height
+    width: $main-content-width
+    margin: 0 auto
+
+    .bottom-menu
+      width: $bottom-menu-width
+      float: left
+      min-height: 10px
+      padding-top: $footer-padding-top
+      .bottom-menu-item
+        +bottom_menu_item
+
+    .catalog-popular
+      float: left
+      width: 310px
+      padding-left: 30px
+      padding-top: $footer-padding-top
+      min-height: 10px
+      .taitle
+        font-size: 16px
+        width: 100%
+        float: left
+        color: $big-blok-color-1
+        padding-bottom: 28px
+      .menu-item-handle
+        float: left
+        width: 50%
+      .bottom-menu-item
+        +bottom_menu_item
+    .footer-developers
+      padding-top: $footer-padding-top
+      width: 200px
+      float: right
+      .copy
+        width: 193px
+        font-size: 11px
+        color: $color-link
+        float: left
+        padding-left: 7px
+        height: 39px
+      a
+        font-size: 12px
+        display: block
+        float: left
+        padding-left: 18px
+        text-decoration: none
+      .footer-dev-logo
+        height: 32px

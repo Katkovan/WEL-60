@@ -1,0 +1,277 @@
+@import variables
+
+$slider-width: $main-content-width
+$slider-height: 300px
+
+$controls-width: 53px
+$controls-height: 76px
+
+$slider-gray: #d7d7d7
+
+$slider-item-content-offset: 60px
+$slider-item-content-width: $slider-width/2 - $slider-item-content-offset
+$slider-item-content-padding: 15px
+
+.slider_main
+  float: left
+  width: $slider-width
+  height: $slider-height
+  background: $color-background
+  border-radius: 6px
+  position: relative
+  .slider_main-viewport
+    width: $slider-width
+    height: $slider-height
+    margin: 0 auto
+    border-radius: 6px
+    overflow: hidden
+  .slider_main-item
+    overflow: hidden
+    white-space: nowrap
+    background: $color-background
+    .slider-item-link
+      width: 100%
+      height: 100%
+      display: block
+      position: relative
+    .touch-slider-item-content
+      box-sizing: border-box
+      position: absolute
+      white-space: normal
+      width: $slider-item-content-width
+      padding: $slider-item-content-padding
+      background: transparentize($color-background,0.12)
+      right: $slider-item-content-offset
+      border-radius: 6px
+      top: 20px
+  .slider_main-prev, .slider_main-next
+    font-size: 14px
+    position: absolute
+    z-index: 100
+    top: ($slider-height - $controls-height)/2
+    width: $controls-width
+    height: $controls-height
+    background: $slider-gray
+    cursor: pointer
+    &:hover
+      +block-primary
+    &:after
+      position: absolute
+      content: ""
+      width: 22px
+      height: 34px
+      top: 21px
+  .slider_main-prev
+    border-radius: 0 $controls-height $controls-height 0
+    left: 0px
+    &:after
+      left: 12px
+      background: url("#{$MEDIA_PATH}images/main_slider-nav_left.png") no-repeat
+  .slider_main-next
+    right: 0px
+    border-radius: $controls-height 0 0 $controls-height
+    &:after
+      right: 12px
+      background: url("#{$MEDIA_PATH}images/main_slider-nav_right.png") no-repeat
+
+  .slider_main-controls
+    width: $slider-item-content-width
+    position: absolute
+    text-align: right
+    bottom: 22px
+    left: $slider-item-content-width - 2*$slider-item-content-padding
+  .slider_main-nav-item
+    display: inline-block
+    width: 12px
+    height: 12px
+    background: $slider-gray
+    border-radius: 10px
+    cursor: pointer
+    margin: 2px 4px
+  .slider_main-nav-item-current
+    margin: 0 2px
+    background: transparent
+    border: 2px solid $color-link
+
+
+.advantages
+  width: $main-content-width - 20px - $slider-width
+  float: right
+  min-height: 10px
+  table
+    width: 100%
+    tr
+      border-bottom: 1px solid transparentize($color-text,0.5)
+      &:last-child
+        border-bottom: none
+      &:first-child td
+        padding-top: 0px
+    td
+      padding: 11px 0 13px
+      img
+        vertical-align: middle
+      &.icon
+        width: 76px
+        vertical-align: middle
+        text-align: left
+      &.description
+        text-align: left
+        vertical-align: middle
+        color: $big-blok-color-1
+        line-height: 15px
+        font-size: 15px
+
+$product-slider-padding-horizontal: $content-sep
+$product-slider-border-width: 1px
+$product_slider_width: $r-content-width + $product-slider-padding-horizontal - 2*$product-slider-border-width
+$product_slider_height: 322px - 2*$product-slider-border-width
+$product_slider_vieport_width: $product_slider_width - 2*$product-slider-padding-horizontal
+$product_slider_controls_width: 18px
+$product_slider_controls_height: 29px
+$catalog_list_offset: 7px
+
+
+.product_slider
+  display: none
+  position: relative
+  float: left
+  width: $product_slider_width
+  height: $product_slider_height
+  border: $product-slider-border-width solid $big-blok-color-1
+  background: $color-background
+  border-radius: 6px
+  &.active
+    display: block
+  .product_slider-viewport
+    width: $product_slider_vieport_width
+    height: $product_slider_height
+    margin: 0 auto
+    border-radius: 6px
+    overflow: hidden
+  .product_slider-item
+    overflow: hidden
+    //white-space: nowrap
+    //background: $color-background
+    .catalog-items-list
+      box-sizing: border-box
+      width: $product_slider_vieport_width
+      padding: 35px $catalog_list_offset 20px
+      .catalog-product
+        margin-right: round(($product_slider_vieport_width - 2*$catalog_list_offset - 3*$catalog-list-item-width - 1)/2)
+        &.last
+          margin-right: 0px
+  .product_slider-prev, .product_slider-next
+    position: absolute
+    z-index: 100
+    top: ($product_slider_height - $product_slider_controls_height - 14px)/2
+    width: $product_slider_controls_width
+    height: $product_slider_controls_height + 14px
+    background: $color-background
+    cursor: pointer
+    &:after
+      top: 7px
+      position: absolute
+      content: ""
+      width: $product_slider_controls_width
+      height: $product_slider_controls_height
+      background: url("#{$MEDIA_PATH}images/product-slider-nav.png") no-repeat
+  .product_slider-prev
+    left: -2px
+    &:after
+      left: 0px
+      background-position: 0px (-$product_slider_controls_height)
+    &:hover:after
+      background-position: (-$product_slider_controls_width) (-$product_slider_controls_height)
+  .product_slider-next
+    right: -2px
+    &:after
+      right: 0px
+    &:hover:after
+      background-position: (-$product_slider_controls_width) 0px
+
+
+$promo-tab-offset: 15px
+$promo-tab-padding-h: 34px
+
+
+.product-promotion-slider
+  padding-top: 20px
+  float: left
+  position: relative
+  width: $product_slider_width
+  margin-left: -$product-slider-padding-horizontal
+  .tab-switches
+    position: absolute
+    float: left
+    background: $color-background
+    height: 40px
+    top: 0px
+    left: 0px
+    z-index: 1
+    .promo-tab
+      position: relative
+      float: left
+      box-sizing: border-box
+      height: 40px
+      padding: 13px (34px + $promo-tab-offset) 11px
+      font-size: 16px
+      color: $big-blok-color-1
+      line-height: 1
+      cursor: pointer
+      margin:
+        left: -$promo-tab-offset
+      &:after
+        content: ""
+        position: absolute
+        top: 0
+        right: -3px
+        background: url("#{$MEDIA_PATH}images/slider-tabs-sep.png") no-repeat
+        height: 40px
+        width: 18px
+      &.last:after
+        background: none
+      &.first
+        margin: 0
+        border-radius: 6px 0 0 0
+        padding: (13px - $product-slider-border-width) ($promo-tab-padding-h + $promo-tab-offset) 11px ($promo-tab-padding-h - $product-slider-border-width)
+        border-top: $product-slider-border-width solid $big-blok-color-1
+        border-left: $product-slider-border-width solid $big-blok-color-1
+        &.active
+          padding: 13px ($promo-tab-padding-h + $promo-tab-offset) 11px $promo-tab-padding-h
+          border: none
+          &:after
+            top: 0
+            right: 0
+            background: none
+            width: 0px
+            height: 0px
+          &:before
+            content: none
+        &:after
+          content: ""
+          position: absolute
+          top: -2px
+          background-color: $color-background
+      &.active
+        color: $color-background
+        +block-primary
+        &:before
+          content: ""
+          position: absolute
+          top: 0
+          left: 0
+          border:
+            right: $promo-tab-offset solid transparent
+            bottom: 40px solid $color-background
+        &:after
+          content: ""
+          position: absolute
+          top: 0
+          right: 0
+          width: 0px
+          height: 0px
+          border:
+            left: $promo-tab-offset solid transparent
+            top: 40px solid $color-background
+
+

@@ -1,0 +1,112 @@
+$main-content-width: 980px
+$l-content-width: 210px
+$content-sep: 20px
+$r-content-width: $main-content-width - ($l-content-width+$content-sep)
+
+$footer_height: 229px
+
+$color-error: #ff000f
+
+$color-background: #fff
+
+//$color-link: #670c73
+$color-link: #853782
+$color-link-hover: lighten(#853782,7)
+$color-h: #853782
+$color-text: #666666
+
+
+$big-blok-color-0: #a49681
+$big-blok-color-1: #938471
+
+$small-blok-color-0: lighten(#853782,7)
+$small-blok-color-1: #853782
+
+$borders-1: #eeeeee
+
+$font-0: 'Roboto', sans-serif
+
+
+=gradient_top($color-top, $color-bottom)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color-top), color-stop(100%,$color-bottom))
+  background: -webkit-linear-gradient(top,  $color-top 0%,$color-bottom 100%)
+  background: linear-gradient(to bottom,  $color-top 0%,$color-bottom 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$color-top}', endColorstr='#{$color-bottom}',GradientType=0 )
+
+
+
+=block-primary
+  +gradient_top($big-blok-color-0,$big-blok-color-1)
+
+=block-primary-hover
+  +gradient_top(lighten($big-blok-color-0,5),lighten($big-blok-color-1,5))
+
+=block-primary-active
+  +gradient_top($small-blok-color-0,$small-blok-color-1)
+
+=basic-button
+  line-height: 1
+  border-radius: 4px
+  text-decoration: none
+  outline: none
+  transition: background 200ms
+  border:
+    width: 1px
+    style: solid
+
+=block-secondary
+  +basic-button
+  background: $color-background
+  color: $small-blok-color-1
+  border-color: $small-blok-color-1
+
+
+=block-secondary-hover
+  color: $color-background
+  background: $small-blok-color-1
+
+
+=block-secondary-active
+  color: $color-background
+  background: $small-blok-color-0
+
+
+
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
++keyframes(loadin)
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+=animation($name,$props)
+  -ms-animation: $name $props
+  -moz-animation: $name $props
+  -webkit-animation: $name $props
+  -o-animation: $name $props
+  animation: $name $props
+
+=spinner
+  +animation(loadin, 2s linear infinite)
+
+=selection($color,$bg-color)
+  &::-moz-selection
+    background: $bg-color
+    color: $color
+  &::-webkit-selection
+    background: $bg-color
+    color: $color
+  &::selection
+    background: $bg-color
+    color: $color
+
+$MEDIA_PATH: "../"

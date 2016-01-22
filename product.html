@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="ru"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8 ie7" lang="ru"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9" lang="ru"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="ru"> <!--<![endif]-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="shortcut icon" href="http://welss.ru/media/images/favicon.ico">
+
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300italic,300,100italic,100,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" media="screen" href="./media/css/style.css" charset="utf-8">
+    <link rel="stylesheet" media="screen" href="./media/fancybox/jquery.fancybox-1.3.4.css">
+
+    <script type="text/javascript" src="./media/js/vendor/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="./media/js/vendor/jquery.touchslider.js"></script>
+    <script type="text/javascript" src="./media/js/vendor/masked_input.js"></script>
+    <script type="text/javascript" src="./media/js/vendor/jquery-ui-1.8.23.custom.min.js" ></script>
+    <script type="text/javascript" src="./media/js/vendor/jquery.ui.touch.js" ></script>
+    <script type="text/javascript" src="./media/js/vendor/select2/select2.js" ></script>
+    <script type="text/javascript" src="./media/js/vendor/select2/select_2_locale.ru.js" ></script>
+    <script type="text/javascript" src="./media/js/input_delay.js"></script>
+    <script type="text/javascript" src="./media/js/modals.js"></script>
+    <script type="text/javascript" src="./media/js/forms.js"></script>
+    <script type="text/javascript" src="./media/js/filter_widget.js"></script>
+    <script type="text/javascript" src="./media/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+    <script type="text/javascript" src="./media/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+
+
+    <title>Прибор для усиления роста и укрепления волос WS 4033</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+</head>
+
+<body>
+    <a style="display: none" href="" class="modal-backdrop" id="feedback-backdrop"></a>
+    <div class="modal-window" id="feedback-popup" style="display: none">
+        <div class="inner">
+            <a href="" class="close-it">×</a>
+            <div class="tmce"></div>
+            <div class="form">
+                <div class="form-title">Написать нам</div>
+                <form remote="true" enctype="multipart/form-data" action="http://welss.ru/kontakty/" method="post">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="">
+                    <input type="hidden" name="show_form" value="True" required="">
+                    <input type="hidden" id="check" name="name" value="imbot" required="">
+                    <div class="row">
+                        <input value="" placeholder="Имя" name="eman">
+                    </div>
+                    <div class="row right">
+                        <input value="" placeholder="E-mail" name="email">
+                    </div>
+                    <div class="row full">
+                        <textarea name="message" placeholder="Сообщение"></textarea>
+                    </div>
+                    <div class="cb"></div>
+                    <button class="butt">Отправить</button>
+                    <div class="required">Все поля являются обязательными</div>
+                    <div class="cb"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="main-content-wrapper">
+        <div class="pattern-fill">
+            <div class="header-placeholder"></div>
+            <div class="header">
+                <div class="header-wrapper">
+                    <div class="top-menu">
+                        <a href="http://welss.ru/" class="top-menu-item">Главная</a>
+                        <a href="http://welss.ru/o-kompanii/" class="top-menu-item">О компании</a>
+                        <a href="http://welss.ru/novosti/" class="top-menu-item">Новости</a>
+                        <a href="http://welss.ru/kontakty/" class="top-menu-item">Контактная информация</a>
+                    </div>
+                    <a id="show_form-header" class="header-feedback-button" href="http://welss.ru/kontakty/?show_form=true">Обратная связь</a>
+                    <div class="cb"></div>
+                </div>
+            </div>
+            <div class="header-contacts">
+                <a href="http://welss.ru/" class="hc-company-logo"></a>
+                <div class="hc-inner">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="hc-phone">
+                                    <div class="hc-ico phone"></div>
+                                </td>
+                                <td class="tmce">
+                                    <a href="tel:+7 (495) 617-60-33">+7 (495) 617-60-33</a>
+                                </td>
+                                <td class="hc-email">
+                                    <div class="hc-ico email"></div>
+                                </td>
+                                <td class="tmce">
+                                    <a href="mailto:info@welss.ru">info@welss.ru</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="cb"></div>
+                </div>
+                <div class="cb"></div>
+            </div>
+            <div class="wrap">
+                <div class="cb-40"></div>
+                <div class="cb"></div>
+            </div>
+        </div>
+        <div class="wrap">
+            <div class="cb" style="height: 70px;"></div>
+            <div class="breadcrumbs">
+                <a href="http://welss.ru/" title="Главная страница">Главная страница</a>
+                <span class="slh">/</span>
+                <a href="http://welss.ru/roskoshnye-volosy/" title="Роскошные волосы">Роскошные волосы</a>
+                <span class="slh">/</span>
+                <span class="last">Прибор для усиления роста и укрепления волос WS 4033</span>
+            </div>
+            <div class="cb"></div>
+            <div class="uptolike-container">
+            </div>
+            <div class="main-content">
+                <div class="cb-20"></div>
+                <div class="main-content-l">
+                    <div class="tree-menu side-menu">
+                        <a class="menu-item lvl0" href="http://welss.ru/uhod-za-licom/">
+                Уход за лицом
+            </a>
+                        <a class="menu-item lvl0" href="http://welss.ru/uhod-za-telom/">
+                Уход за телом
+            </a>
+                        <a class="menu-item lvl0" href="http://welss.ru/uhozhennye-nozhki/">
+                Ухоженные ножки
+            </a>
+                        <a class="menu-item active lvl0" href="http://welss.ru/roskoshnye-volosy/">
+                Роскошные волосы
+            </a>
+                        <a class="menu-item lvl0" href="http://welss.ru/kosmetika/">
+                Косметика
+            </a>
+                        <a class="menu-item lvl0" href="http://welss.ru/zdorove/">
+                Здоровье
+            </a>
+                    </div>
+                    <div class="cb-40"></div>
+                    <div class="cb"></div>
+                </div>
+                <div class="main-content-r tmce">
+                    <div class="product-detail side-l">
+                        <div class="product-detail-images">
+                            <div class="big">
+                                <a rel="group" class="sgallery" href="http://welss.ru/media/uploads/catalog/pribordlyarostavolos.jpg" title="Прибор для усиления роста и укрепления волос WS 4033">
+                                    <img src="./media/uploads/82f2bc2b3f76799c7e71ddd7d22f9f4b.jpg" alt="Прибор для усиления роста и укрепления волос WS 4033">
+                                </a>
+                            </div>
+                            <div class="small">
+                                <a rel="group" href="http://welss.ru/media/uploads/catalog/212.jpg" class="sgallery first" title="">
+                                    <img src="./media/uploads/88d7f35d2c27f9255908693efd7ecac6.jpg" alt="">
+                                </a>
+                                <a rel="group" href="http://welss.ru/media/uploads/catalog/37.jpg" class="sgallery " title="">
+                                    <img src="./media/uploads/19dc0f917c44a5e533816b1ba9334d46.jpg" alt="">
+                                </a>
+                                <a rel="group" href="http://welss.ru/media/uploads/catalog/114.jpg" class="sgallery last" title="">
+                                    <img src="./media/uploads/7e130bf47c809d5b34dba38b094a183c.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="cb"></div>
+                    </div>
+                    <div class="product-detail side-r">
+                        <h1>Прибор для усиления роста и укрепления волос WS 4033 </h1>
+                        <table class="product-detail-features">
+                            <tbody>
+                                <tr>
+                                    <td>Питание</td>
+                                    <td>Батарея ААА - 2 штуки (в комплект не входят)</td>
+                                </tr>
+                                <tr>
+                                    <td>Размеры изделия</td>
+                                    <td>18.5х4.5х3.5 см</td>
+                                </tr>
+                                <tr>
+                                    <td>Размеры упаковки</td>
+                                    <td>27.9х11.0х4.2 см</td>
+                                </tr>
+                                <tr>
+                                    <td>Вес изделия</td>
+                                    <td>160 гр</td>
+                                </tr>
+                                <tr>
+                                    <td>Вес упаковки</td>
+                                    <td>205 гр</td>
+                                </tr>
+                                <tr>
+                                    <td>Температурный режим работы</td>
+                                    <td>5-40 С</td>
+                                </tr>
+                                <tr>
+                                    <td>Объем резервуара для лосьона</td>
+                                    <td>1.2 мл</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="cb-20"></div>
+                    <div class="product-description-title">Описание</div>
+                    <div class="cb"></div>
+                    <p>Тусклые, слабые, ломкие волосы могут испортить настроение любой девушке. Если на расческе остается целый пучок волос – Вам необходимо принимать срочные меры! Именно тогда на помощь приходит прибор для усиления роста и укрепления волос WELSS WS 4033 - профессиональное устройство для предотвращения выпадения, усиления роста и укрепления волос. Несколько процедур – и Ваши волосы станут крепкими, блестящими и красивыми! И не забудьте, что &nbsp;аппарат также помогает восстановить и такой важный показатель, как Ph кожи головы.</p>
+                    <h3><span style="color: #800080;">Как же работает аппарат?</span></h3>
+                    <p>В основе принципа действия WELSS WS 4033 - воздействие лосьона-сыворотки, которая активизирует рост здоровых волос, увеличивает их плотность, способствует восстановлению цвета волос, повышает эластичность волос, увлажняет волосы, нормализует состояние кожи головы. В результате волосы становятся менее ломкими, уменьшается зуд и исчезает перхоть, волосы становятся более послушными и блестящими.</p>
+                    <p>Решив приобрести прибор для усиления роста и укрепления волос WELSS WS 4033 для домашнего использования, Вы никогда не пожалеете об этом. Этот компактный прибор поистине уникален. Несколько процедур с WELSS WS 4033 – и теперь Ваши волосы уже не слабые и ломкие, а крепкие, шелковистые и легко расчесываются!</p>
+                    <p>Прибор WELSS WS 4033 снижает негативное воздействие окружающей среды на волосы, способствует быстрому восстановлению волос после окрашивания
+                        <a style="background-color: #ffffff;" name="_GoBack"></a>и химической завивки.</p>
+                    <h3><span style="color: #800080;">Преимущества:</span></h3>
+                    <p>Справиться с выпадением волос на любой стадии как у мужчин, как и у женщин.</p>
+                    <ul>
+                        <li>Не электризует волосы и помогает снять остаточное напряжение.</li>
+                        <li>Заметно улучшит качество волос, придаст им насыщенную яркость и блеск.</li>
+                        <li>Противодействует развитию перхоти, снимает зуд и шелушение кожи головы. &nbsp;</li>
+                    </ul>
+                    <p class="MsoNormal" style="margin-bottom: 0.0001pt;">Просто расчесывайте волосы, как обычно - утром, вечером, днем - и укрепляйте свои волосы раз за разом!</p>
+                    <h3 class="MsoNormal" style="margin-bottom: 0.0001pt;"><a href="http://welss.ru/media/upload/%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F_ws_4033.pdf" target="_blank"><span style="color: #800080;">Скачать инструкцию</span></a></h3>
+                    <div class="cb-20"></div>
+                    <div class="product-promotion-slider">
+                        <div class="tab-switches">
+                            <div tab-index="0" class="promo-tab active first last">Аналогичные товары</div>
+                        </div>
+                        <div tab-index="0" class="product_slider tab_id0 active">
+                            <div class="product_slider-viewport tab_id0">
+                                <div>
+                                    <div class="product_slider-item tab_id0">
+                                        <div class="catalog-items-list">
+                                            <div class="catalog-product ">
+                                                <a class="product-link" href="http://welss.ru/roskoshnye-volosy/darsonval-apparat-ws2320/" title="Аппарат Дарсонваль WS 2320">
+                                                    <div class="product-image-wrapper">
+                                                        <div class="product-image">
+                                                            <img src="./media/uploads/948c01cc1ef6e1cc7893560873071475.jpg" alt="Аппарат Дарсонваль WS 2320">
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-title">
+                                                        Аппарат Дарсонваль WS 2320
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="catalog-product ">
+                                                <a class="product-link" href="http://welss.ru/roskoshnye-volosy/vypryamitel-dlya-volos-s-maslom-argany-welss-ws-4010/" title="Выпрямитель для волос с маслом Арганы WELSS WS  4010">
+                                                    <div class="product-image-wrapper">
+                                                        <div class="product-image">
+                                                            <img src="./media/uploads/1994daa1a6b02167938c095a7d2a52ff.jpg" alt="Выпрямитель для волос с маслом Арганы WELSS WS  4010">
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-title">
+                                                        Выпрямитель для волос с маслом Арганы WELSS WS 4010
+                                                    </div>
+                                                </a>
+                                                <div class="product-short-desc tmce">
+                                                    Эффект кератинового выпрямления...
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                            jQuery(function($) {
+                                $(".product_slider.tab_id0").touchSlider({
+                                    autoplay: true,
+                                    namespace: "product_slider",
+                                    x_namespace: ".tab_id0"
+                                });
+
+                            });
+                            </script>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                    var simple_tab_manager = function() {
+                        var tabs = new Array();
+
+                        var tabs_update = function(index) {
+                            if (tabs.length > 0) {
+                                for (var i = 0; i < tabs.length; i++) {
+                                    if (i === index) {
+                                        tabs[i]._open();
+                                    } else {
+                                        tabs[i]._close()
+                                    }
+                                }
+                            }
+                        }
+
+                        $(".promo-tab").each(function() {
+                            var tab = new Object();
+                            tab.button = $(this);
+                            tab.is_active = tab.button.hasClass("active");
+                            tab.tab_index = parseInt(tab.button.attr("tab-index"));
+                            tab.content = $(".product_slider[tab-index='" + tab.tab_index + "']");
+                            tab._open = function() {
+                                tab.button.toggleClass("active", true);
+                                tab.content.toggleClass("active", true);
+                            }
+                            tab._close = function() {
+                                tab.is_active = false;
+                                tab.button.toggleClass("active", false);
+                                tab.content.toggleClass("active", false);
+                            }
+                            tab.button.on("click", function() {
+                                if (tab.is_active === false) {
+                                    tabs_update(tab.tab_index);
+                                }
+                            });
+                            tabs.push(tab);
+                        });
+
+                        return tabs;
+                    }
+                    jQuery(function($) {
+                        var tabz = simple_tab_manager();
+                    });
+                    </script>
+                </div>
+                <div class="cb"></div>
+            </div>
+            <div class="cb"></div>
+        </div>
+        <div class="cb"></div>
+        <div class="pax"></div>
+    </div>
+    <div class="footer">
+        <div class="footer-wrap">
+            <div class="bottom-menu">
+                <a href="http://welss.ru/" class="bottom-menu-item">Главная</a>
+                <div class="cb"></div>
+                <a href="http://welss.ru/sitemap-html/" class="bottom-menu-item">Карта сайта</a>
+                <div class="cb"></div>
+                <a href="http://welss.ru/o-kompanii/" class="bottom-menu-item">О компании</a>
+                <div class="cb"></div>
+                <a href="http://welss.ru/novosti/" class="bottom-menu-item">Новости</a>
+                <div class="cb"></div>
+                <a href="http://welss.ru/kontakty/" class="bottom-menu-item">Контактная информация</a>
+                <div class="cb"></div>
+                <div class="cb"></div>
+            </div>
+            <div class="catalog-popular">
+                <div class="taitle">Популярные категории</div>
+                <div class="menu-item-handle">
+                    <a href="http://welss.ru/uhod-za-licom/" class="bottom-menu-item">Уход за лицом</a>
+                </div>
+                <div class="menu-item-handle">
+                    <a href="http://welss.ru/uhod-za-telom/" class="bottom-menu-item">Уход за телом</a>
+                </div>
+                <div class="cb"></div>
+                <div class="menu-item-handle">
+                    <a href="http://welss.ru/uhozhennye-nozhki/" class="bottom-menu-item">Ухоженные ножки</a>
+                </div>
+                <div class="menu-item-handle">
+                    <a href="http://welss.ru/roskoshnye-volosy/" class="bottom-menu-item">Роскошные волосы</a>
+                </div>
+                <div class="cb"></div>
+                <div class="menu-item-handle">
+                    <a href="http://welss.ru/kosmetika/" class="bottom-menu-item">Косметика</a>
+                </div>
+                <div class="menu-item-handle">
+                    <a href="http://welss.ru/zdorove/" class="bottom-menu-item">Здоровье</a>
+                </div>
+                <div class="cb"></div>
+            </div>
+            <div class="footer-developers">
+                <div class="copy">© 2015 Welss</div>
+                <a class="footer-dev-logo" href="http://www.simplemedia.ru/">
+                    <img src="./media/images/dev-logo.png">
+                </a>
+                <a href="http://www.simplemedia.ru/sozdanie-internet-magazina/">
+                Создание интернет-магазина
+            </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

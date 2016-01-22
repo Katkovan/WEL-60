@@ -1,0 +1,654 @@
+@import variables
+
+//colors
+$color_silver_chalice_approx: #aaa
+$color_tundora_approx: #444
+$white: #fff
+$color_gallery_approx: #eee
+$black: #000
+$black_15: rgba(0, 0, 0, .15)
+$color_cornflower_blue_approx: $color-link
+$color_celeste_approx: #ccc
+$black_30: rgba(0, 0, 0, .3)
+$color_royal_blue_approx: $color-link
+$color_half_and_half_approx: #feffde
+$wild_sand: #f4f4f4
+$color_storm_dust_approx: #666
+$color_red_orange_20_approx: rgba(255, 50, 50, .2)
+$color_alto_approx: #ddd
+$color_mountain_mist_approx: #999
+$color_mine_shaft_approx: #333
+$black_5: rgba(0, 0, 0, 0.05)
+$color_mercury_approx: #e4e4e4
+$color_gray_nurse_approx: #e8e8e8
+$color_quill_gray_approx: #d4d4d4
+
+//fonts
+
+
+//urls
+$url_0: url("#{$MEDIA_PATH}images/select2.png")
+$url_1: url("#{$MEDIA_PATH}images/select2-spinner.gif")
+$url_2: url("#{$MEDIA_PATH}images/select2x2.png")
+
+.select2-container
+  margin: 0
+  position: relative
+  display: inline-block
+  zoom: 1
+  *display: inline
+  vertical-align: middle
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  //If you use compass, instead of the line below you could use +box-sizing($bs)
+  box-sizing: border-box
+  .select2-choice
+    display: block
+    height: 26px
+    padding: 0 0 0 8px
+    overflow: hidden
+    position: relative
+    border: 1px solid $color_silver_chalice_approx
+    white-space: nowrap
+    line-height: 26px
+    color: $color_tundora_approx
+    text-decoration: none
+    //If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+    border-radius: 5px
+    //If you use compass, instead of the line below you could use +background-clip($clip)
+    background-clip: padding-box
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    //If you use compass, instead of the line below you could use +user-select($select)
+    user-select: none
+    background-color: $white
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, $color_gallery_approx), color-stop(0.5, $white))
+    background-image: -webkit-linear-gradient(center bottom, $color_gallery_approx 0, $white 50%)
+    background-image: -moz-linear-gradient(center bottom, $color_gallery_approx 0, $white 50%)
+    filter: progid:dximagetransform.microsoft.gradient(startcolorstr = '$white', endcolorstr = '$color_gallery_approx', gradienttype = 0)
+    background-image: linear-gradient(to top, $color_gallery_approx 0, $white 50%)
+    abbr
+      display: none
+      width: 12px
+      height: 12px
+      position: absolute
+      right: 24px
+      top: 8px
+      font-size: 1px
+      text-decoration: none
+      border: 0
+      background: $url_0 right top no-repeat
+      cursor: pointer
+      outline: 0
+      &:hover
+        background-position: right -11px
+        cursor: pointer
+
+
+    .select2-arrow
+      display: inline-block
+      width: 18px
+      height: 100%
+      position: absolute
+      right: 0
+      top: 0
+      border-left: 1px solid $color_silver_chalice_approx
+      //If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+      border-radius: 0 4px 4px 0
+      //If you use compass, instead of the line below you could use +background-clip($clip)
+      background-clip: padding-box
+      background: $color_celeste_approx
+      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, $color_celeste_approx), color-stop(0.6, $color_gallery_approx))
+      background-image: -webkit-linear-gradient(center bottom, $color_celeste_approx 0, $color_gallery_approx 60%)
+      background-image: -moz-linear-gradient(center bottom, $color_celeste_approx 0, $color_gallery_approx 60%)
+      filter: progid:dximagetransform.microsoft.gradient(startcolorstr = '$color_gallery_approx', endcolorstr = '$color_celeste_approx', gradienttype = 0)
+      background-image: linear-gradient(to top, $color_celeste_approx 0, $color_gallery_approx 60%)
+      b
+        display: block
+        width: 100%
+        height: 100%
+        background: $url_0 no-repeat 0 1px
+
+
+    > .select2-chosen
+      margin-right: 26px
+      display: block
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
+      float: none
+      width: auto
+
+
+  &.select2-drop-above .select2-choice
+    border-bottom-color: $color_silver_chalice_approx
+    //If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+  &.select2-allowclear .select2-choice
+    .select2-chosen
+      margin-right: 42px
+
+    abbr
+      display: inline-block
+
+
+  &.select2-container-disabled .select2-choice
+    background-color: $wild_sand
+    background-image: none
+    border: 1px solid $color_alto_approx
+    cursor: default
+    .select2-arrow
+      background-color: $wild_sand
+      background-image: none
+      border-left: 0
+
+    abbr
+      display: none
+
+
+
+.select2-drop
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  //If you use compass, instead of the line below you could use +box-sizing($bs)
+  box-sizing: border-box
+  width: 100%
+  margin-top: -1px
+  position: absolute
+  z-index: 9999
+  top: 100%
+  background: $white
+  color: $black
+  border: 1px solid $color_silver_chalice_approx
+  border-top: 0
+  //If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+  border-radius: 0 0 4px 4px
+  &.select2-drop-above
+    margin-top: 1px
+    border-top: 1px solid $color_silver_chalice_approx
+    border-bottom: 0
+    //If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+    border-radius: 4px 4px 0 0
+    &.select2-drop-active
+      border-top: 1px solid $color_cornflower_blue_approx
+
+    .select2-search input
+      margin-top: 4px
+
+
+
+.select2-search
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  //If you use compass, instead of the line below you could use +box-sizing($bs)
+  box-sizing: border-box
+  display: inline-block
+  width: 100%
+  min-height: 26px
+  margin: 0
+  padding-left: 4px
+  padding-right: 4px
+  position: relative
+  z-index: 10000
+  white-space: nowrap
+  input
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    //If you use compass, instead of the line below you could use +box-sizing($bs)
+    box-sizing: border-box
+    width: 100%
+    height: auto !important
+    min-height: 26px
+    padding: 4px 20px 4px 5px
+    margin: 0
+    outline: 0
+    font-family: $font_0
+    font-size: 1em
+    border: 1px solid $color_silver_chalice_approx
+    //If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+    border-radius: 0
+    background: $white $url_0 no-repeat 100% -22px
+    background: $url_0 no-repeat 100% -22px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, $white), color-stop(0.99, $color_gallery_approx))
+    background: $url_0 no-repeat 100% -22px, -webkit-linear-gradient(center bottom, $white 85%, $color_gallery_approx 99%)
+    background: $url_0 no-repeat 100% -22px, -moz-linear-gradient(center bottom, $white 85%, $color_gallery_approx 99%)
+    background: $url_0 no-repeat 100% -22px, linear-gradient(to bottom, $white 85%, $color_gallery_approx 99%) 0 0
+    &.select2-active
+      background: $white $url_1 no-repeat 100%
+      background: $url_1 no-repeat 100%, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, $white), color-stop(0.99, $color_gallery_approx))
+      background: $url_1 no-repeat 100%, -webkit-linear-gradient(center bottom, $white 85%, $color_gallery_approx 99%)
+      background: $url_1 no-repeat 100%, -moz-linear-gradient(center bottom, $white 85%, $color_gallery_approx 99%)
+      background: $url_1 no-repeat 100%, linear-gradient(to bottom, $white 85%, $color_gallery_approx 99%) 0 0
+
+
+
+html[dir="rtl"]
+  .select2-results
+    padding: 0 0 0 0
+    margin: 6px
+
+  .select2-container-multi
+    .select2-choices
+      padding: 0 0 0 5px
+      li
+        float: right
+
+      .select2-search-choice
+        margin: 3px 5px 3px 0
+        padding: 3px 18px 3px 5px
+
+
+    .select2-search-choice-close
+      left: auto
+      right: 2px
+
+
+  .select2-search-choice-close
+    right: auto
+    left: 3px
+
+  .select2-container .select2-choice
+    padding: 0 8px 0 0
+    .select2-arrow
+      left: 0
+      right: auto
+      border-left: none
+      border-right: 1px solid $color_silver_chalice_approx
+      //If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+      border-radius: 4px 0 0 4px
+      b
+        background-position: 2px 1px
+
+
+    > .select2-chosen
+      margin-left: 26px
+      margin-right: 0
+
+
+  .select2-search input
+    padding: 4px 5px 4px 20px
+    background: $white $url_0 no-repeat -37px -22px
+    background: $url_0 no-repeat -37px -22px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, $white), color-stop(0.99, $color_gallery_approx))
+    background: $url_0 no-repeat -37px -22px, -webkit-linear-gradient(center bottom, $white 85%, $color_gallery_approx 99%)
+    background: $url_0 no-repeat -37px -22px, -moz-linear-gradient(center bottom, $white 85%, $color_gallery_approx 99%)
+    background: $url_0 no-repeat -37px -22px, linear-gradient(to bottom, $white 85%, $color_gallery_approx 99%) 0 0
+
+  .select2-dropdown-open .select2-choice .select2-arrow
+    border-right: none
+    b
+      background-position: -16px 1px
+
+
+
+.select2-drop-mask
+  border: 0
+  margin: 0
+  padding: 0
+  position: fixed
+  left: 0
+  top: 0
+  min-height: 100%
+  min-width: 100%
+  height: auto
+  width: auto
+  opacity: 0
+  z-index: 9998
+  background-color: $white
+  filter: alpha(opacity=0)
+
+.select2-drop-active
+  border: 1px solid $color_cornflower_blue_approx
+  border-top: none
+
+.select2-drop-auto-width
+  border-top: 1px solid $color_silver_chalice_approx
+  width: auto
+  .select2-search
+    padding-top: 4px
+
+
+.select2-container-active
+  .select2-choice
+    border: 1px solid $color_cornflower_blue_approx
+    outline: none
+
+  .select2-choices
+    border: 1px solid $color_cornflower_blue_approx
+    outline: none
+
+
+.select2-dropdown-open
+  .select2-choice
+    border-bottom-color: transparent
+    //If you use compass, instead of the line below you could use +border-bottom-left-radius($radius)
+    border-bottom-left-radius: 0
+    //If you use compass, instead of the line below you could use +border-bottom-right-radius($radius)
+    border-bottom-right-radius: 0
+    background-color: $color_gallery_approx
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, $white), color-stop(0.5, $color_gallery_approx))
+    background-image: -webkit-linear-gradient(center bottom, $white 0, $color_gallery_approx 50%)
+    background-image: -moz-linear-gradient(center bottom, $white 0, $color_gallery_approx 50%)
+    filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_gallery_approx', endcolorstr='$white', gradienttype=0)
+    background-image: linear-gradient(to top, $white 0, $color_gallery_approx 50%)
+    .select2-arrow
+      background: transparent
+      border-left: none
+      filter: none
+      b
+        background-position: -18px 1px
+
+
+
+  &.select2-drop-above
+    .select2-choice
+      border: 1px solid $color_cornflower_blue_approx
+      border-top-color: transparent
+
+    .select2-choices
+      border: 1px solid $color_cornflower_blue_approx
+      border-top-color: transparent
+
+
+.select2-hidden-accessible
+  border: 0
+  clip: rect(0 0 0 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px
+
+.select2-results
+  max-height: 200px
+  padding: 0px
+  margin: 0px
+  position: relative
+  overflow-x: hidden
+  overflow-y: auto
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  font-family: $font-0
+  font-size: 14px
+  color: $color-text
+  li
+    list-style: none
+    display: list-item
+    background-image: none
+    em
+      background: $color_half_and_half_approx
+      font-style: normal
+
+    &.select2-result-with-children > .select2-result-label
+      font-weight: bold
+
+
+  .select2-result-label
+    padding: 3px 7px 4px
+    margin: 0
+    cursor: pointer
+    min-height: 1em
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    //If you use compass, instead of the line below you could use +user-select($select)
+    user-select: none
+
+  .select2-highlighted
+    background: $color_royal_blue_approx
+    color: $white
+    em
+      background: transparent
+
+    ul
+      background: $white
+      color: $black
+
+
+  .select2-no-results
+    background: $wild_sand
+    display: list-item
+    padding-left: 5px
+
+  .select2-searching
+    background: $wild_sand
+    display: list-item
+    padding-left: 5px
+
+  .select2-ajax-error
+    background: $wild_sand
+    display: list-item
+    padding-left: 5px
+    background: $color_red_orange_20_approx
+
+  .select2-selection-limit
+    background: $wild_sand
+    display: list-item
+    padding-left: 5px
+
+  .select2-disabled
+    background: $wild_sand
+    display: list-item
+    cursor: default
+    &.select2-highlighted
+      color: $color_storm_dust_approx
+      background: $wild_sand
+      display: list-item
+      cursor: default
+
+
+  .select2-selected
+    display: none
+
+  ul.select2-result-sub
+    margin: 0
+    padding-left: 0
+
+
+.select2-more-results
+  background: $wild_sand
+  display: list-item
+  &.select2-active
+    background: $wild_sand $url_1 no-repeat 100%
+
+
+.select2-container-multi
+  width: 100%
+  .select2-choices
+    border-radius: 6px
+    height: auto !important
+    height: 1%
+    margin: 0
+    position: relative
+    cursor: text
+    overflow: hidden
+    +filter_input
+    padding: 0px
+    li
+      float: left
+      list-style: none
+    .select2-search-field
+      margin: 0
+      padding: 0
+      white-space: nowrap
+      input
+        padding: 9px 5px
+        margin: 1px 0
+        font-family: $font_0
+        font-size: 100%
+        color: $color_storm_dust_approx
+        outline: 0
+        border: 0
+        background: transparent !important
+        &.select2-active
+          background: $white $url_1 no-repeat 100% !important
+
+
+
+    .select2-search-choice
+      padding: 10px 5px 10px 18px
+      position: relative
+      line-height: 1
+      color: $color_mine_shaft_approx
+      cursor: default
+      border: 1px solid $color_silver_chalice_approx
+      //If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+      border-radius: 6px
+      //If you use compass, instead of the line below you could use +background-clip($clip)
+      background-clip: padding-box
+      -webkit-touch-callout: none
+      -webkit-user-select: none
+      -moz-user-select: none
+      -ms-user-select: none
+      //If you use compass, instead of the line below you could use +user-select($select)
+      user-select: none
+      +block-secondary
+      .select2-chosen
+        cursor: default
+
+      .select2-search-choice-close:hover
+        background-position: right -11px
+
+
+    .select2-search-choice-focus
+      color: $color-background
+      background: $small-blok-color-0
+      .select2-search-choice-close
+        background-position: right -11px
+
+
+  &.select2-dropdown-open
+    .select2-choices
+      border-radius: 6px 6px 0px 0px
+    &.select2-drop-above
+      .select2-choices
+        border-radius: 0px 0px 6px 6px
+  .select2-search-choice-close
+    left: 4px
+
+  &.select2-container-active .select2-choices
+    border: 1px solid $color_cornflower_blue_approx
+    outline: none
+
+  &.select2-container-disabled .select2-choices
+    background-color: $wild_sand
+    background-image: none
+    border: 1px solid $color_alto_approx
+    cursor: default
+    .select2-search-choice
+      padding: 3px 5px
+      border: 1px solid $color_alto_approx
+      background-image: none
+      background-color: $wild_sand
+      .select2-search-choice-close
+        display: none
+        background: none
+
+
+
+
+.select2-locked
+  padding: 3px 5px 3px 5px !important
+
+.select2-default
+  color: $color_mountain_mist_approx !important
+
+.select2-search-choice-close
+  display: block
+  width: 12px
+  height: 13px
+  position: absolute
+  left: 4px
+  top: 10px
+  font-size: 1px
+  outline: none
+  background: $url_0 right top no-repeat
+
+.select2-offscreen
+  clip: rect(0 0 0 0) !important
+  width: 1px !important
+  height: 1px !important
+  border: 0 !important
+  margin: 0 !important
+  padding: 0 !important
+  overflow: hidden !important
+  position: absolute !important
+  outline: 0 !important
+  left: 0 !important
+  top: 0 !important
+  &:focus
+    clip: rect(0 0 0 0) !important
+    width: 1px !important
+    height: 1px !important
+    border: 0 !important
+    margin: 0 !important
+    padding: 0 !important
+    overflow: hidden !important
+    position: absolute !important
+    outline: 0 !important
+    left: 0 !important
+    top: 0 !important
+
+
+.select2-display-none
+  display: none
+
+.select2-measure-scrollbar
+  position: absolute
+  top: -10000px
+  left: -10000px
+  width: 100px
+  height: 100px
+  overflow: scroll
+
+//@media only screen and(-webkit-min-device-pixel-ratio: 1.5), only screen and(min-resolution: 2dppx)
+//  .select2-search-choice-close
+//    background-image: $url_2 !important
+//    background-repeat: no-repeat !important
+//    background-size: 60px 40px !important
+//
+//  .select2-search input
+//    background-image: $url_2 !important
+//    background-repeat: no-repeat !important
+//    background-size: 60px 40px !important
+//    background-position: 100% -21px !important
+//
+//  .select2-container .select2-choice
+//    abbr
+//      background-image: $url_2 !important
+//      background-repeat: no-repeat !important
+//      background-size: 60px 40px !important
+//
+//    .select2-arrow b
+//      background-image: $url_2 !important
+//      background-repeat: no-repeat !important
+//      background-size: 60px 40px !important
+
+
+
+.select2-results-dept-1 .select2-result-label
+  padding-left: 20px
+
+.select2-results-dept-2 .select2-result-label
+  padding-left: 40px
+
+.select2-results-dept-3 .select2-result-label
+  padding-left: 60px
+
+.select2-results-dept-4 .select2-result-label
+  padding-left: 80px
+
+.select2-results-dept-5 .select2-result-label
+  padding-left: 100px
+
+.select2-results-dept-6 .select2-result-label
+  padding-left: 110px
+
+.select2-results-dept-7 .select2-result-label
+  padding-left: 120px
+
+.select2-result-selectable .select2-match
+  text-decoration: underline
+
+.select2-result-unselectable .select2-match
+  text-decoration: underline

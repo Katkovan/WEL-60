@@ -1,0 +1,222 @@
+@import variables
+$cart-frames-gray: lighten($color-text, 40)
+
+.cart-button, .tmce .cart-button
+  float: left
+  display: block
+  font-size: 20px
+  text-decoration: none
+  text-align: center
+  border: none
+  line-height: 1
+  padding: 10px 0
+  outline: none
+  +block-secondary
+  &:hover
+    +block-secondary-hover
+  &:active
+    +block-secondary-active
+
+
+.cart-items
+  width: 100%
+  th
+    font-size: 14px
+    font-weight: 300
+    color: transparentize($big-blok-color-1, 0.5)
+    padding-bottom: 11px
+    border-bottom: 3px solid $cart-frames-gray
+  tr
+    width: 100%
+    &.cart-product
+      td
+        padding: 20px 0px
+        border-bottom: 1px solid $cart-frames-gray
+      &.first, &:first-child
+        td
+          padding-top: 23px
+      &.last, &:last-child
+        td
+          border-bottom: none
+    &.cart-summary
+      td
+        color: $color-link
+        padding: 15px 0px 17px
+        border:
+          top: 3px solid $cart-frames-gray
+          bottom: 3px solid $cart-frames-gray
+        .cart-summary-title
+          font-size: 22px
+        .cart-summary-num
+          font-size: 18px
+          span
+            font-size: 18px
+        .cart-button
+          width: 100%
+          float: right
+    td
+      vertical-align: top
+      text-align: left
+      padding: 19px 0
+      &.cart-product-image
+        width: 183px
+        a
+          display: block
+          float: left
+        .product-image-wrapper
+          width: 161px
+          height: 122px
+          overflow: hidden
+          text-align: center
+      &.cart-product-details
+        width: 160px
+        line-height: 13px
+        padding-right: 10px
+        .product-title
+          font-size: 14px
+          line-height: 18px
+          padding-bottom: 18px
+        .product-short-desc
+          font-size: 12px
+          line-height: 16px
+          color: $color-text
+      &.cart-product-price
+        width: 100px
+        padding-right: 10px
+        font-size: 16px
+        color: $color-link
+      &.cart-product-quantity
+        width: 140px
+        .frame
+          margin-top: -7px
+          float: left
+          border-radius: 6px
+          border: 1px solid $color-text
+          .tiny-button
+            display: block
+            float: left
+            width: 33px
+            height: 33px
+            cursor: pointer
+            position: relative
+            text-decoration: none
+            +block-secondary
+            &:hover
+              +block-secondary-hover
+            &:active
+              +block-secondary-active
+            &:after
+              position: absolute
+              color: $color-background
+              font-size: 22px
+              top: 6px
+              left: 8px
+            &.add:after
+              content: "+"
+              font-size: 29px
+              top: 2px
+              left: 9px
+            &.subtract:after
+              content: "_"
+              top: -9px
+              left: 9px
+              font-size: 30px
+          .product-q
+            float: left
+            font-size: 16px
+            line-height: 2.2
+            width: 42px
+            height: 33px
+            text-align: center
+      &.cart-product-total-price
+        font-size: 16px
+        color: $color-link
+        .num
+          width: 110px
+          float: left
+        .remove-from-cart
+          text-decoration: none
+          width: 34px
+          height: 34px
+          text-align: center
+          line-height: 1.3
+          font-weight: 600
+          font-size: 28px
+          background: transparentize(#d5d5d5, 0.5)
+          color: $color-link
+          float: right
+          margin-top: -8px
+          &:hover
+            color: $color-background
+            background: $small-blok-color-0
+          &:active
+            color: $color-background
+            background: $small-blok-color-0
+            box-shadow: inset 0px 2px 1px 0px #000000
+
+.cart-order
+  table
+    width: 100%
+  .left
+    width: 140px
+    font-size: 14px
+    font-weight: 500
+    color: $color-text
+    padding-top: 10px
+    //.required
+    //  color: $color-footer
+  td
+    padding-bottom: 10px
+  .form
+    position: relative
+    padding: 9px 0px
+    input, textarea
+      border-radius: 6px
+      box-sizing: border-box
+      width: 100%
+      padding: 8px 10px 7px
+      font-size: 14px
+      color: $color-text
+      border: 1px solid $cart-frames-gray
+      outline: none
+      &:focus
+        border: 1px solid $color-link
+    textarea
+      resize: none
+      height: 7em
+    .row.error
+      input, textarea
+        color: $color-error
+        border: 1px solid $color-error
+  .cart-button
+    width: 147px
+    float: right
+
+
+$cart-widget-height: 79px
+.cart-widget, a.cart-widget
+  position: fixed
+  display: block
+  cursor: pointer
+  text-decoration: none
+  z-index: 105
+  right: 0px
+  top: 130px
+  width: 65px
+  height: $cart-widget-height
+  background: url("#{$MEDIA_PATH}images/cart.png") no-repeat
+  &:hover
+    background-position: #{0} (-$cart-widget-height)
+  &:active
+    background-position: #{0} (-2*$cart-widget-height)
+  .counter
+    position: absolute
+    width: 27px
+    height: 27px
+    text-align: center
+    font-size: 12px
+    color: $color-background
+    line-height: 27px
+    left: 0px
+    top: 0px
+    background: url("#{$MEDIA_PATH}images/cart_counter.png") no-repeat

@@ -1,0 +1,126 @@
+@import variables
+.blog-list
+  padding: 20px 0px
+  .blog-link
+    width: 100%
+    float: left
+    display: block
+    text-decoration: none
+    color: $color-link
+    font-size: 14px
+    line-height: 18px
+    padding-bottom: 25px
+    border-bottom: 2px solid $borders-1
+    &:hover .blog-name
+      text-decoration: underline
+      color: $color-link-hover
+    .blog-name
+      color: $color-link
+      font-size: 18px
+      line-height: 24px
+      padding-bottom: 1em
+      transition: color 300ms
+    .blog-image
+      text-align: left
+      margin-bottom: 18px
+
+    .blog-short-desc
+      padding-bottom: 18px
+
+    .blog-date
+      text-align: right
+      color: transparentize($color-link,0.4)
+
+
+$announce-image-width: 190px
+$announce-image-margin: 18px
+
+.announce-list
+  float: left
+  width: 100%
+  padding-bottom: 20px
+  .announce-link
+    position: relative
+    width: 100%
+    float: left
+    display: block
+    text-decoration: none
+    color: $color-link
+    font-size: 14px
+    line-height: 18px
+    padding: 25px 0px
+    border-bottom: 2px solid transparentize($color-text, 0.5)
+    transition: border-bottom 200ms
+    &:first-child
+      padding-top: 0px
+    &:hover
+      border-bottom: 2px solid $color-link
+      .announce-details .announce-name
+        color: $color-link
+    .announce-details
+      float: left
+      width: 100%
+      position: relative
+      .announce-name
+        color: $color-link
+        font-size: 18px
+        line-height: 24px
+        padding-bottom: 1em
+        transition: color 300ms
+        margin-top: -5px
+        padding-right: 150px
+        float: left
+      .announce-date
+        text-align: right
+        font-size: 14px
+        line-height: 24px
+        color: transparentize($color-link,0.4)
+        width: 130px
+        right: -0px
+        top: -5px
+        position: absolute
+      .announce-short-desc
+        float: left
+        padding-bottom: 18px
+        p
+          color: $color-text
+    .announce-image
+      text-align: left
+      width: $announce-image-width
+      height: 160px
+      overflow: hidden
+      float: left
+      margin:
+        right: $announce-image-margin
+        bottom: $announce-image-margin
+      & + .announce-details
+        width: $r-content-width - $announce-image-margin - $announce-image-width
+
+
+
+
+.blog-detail-bottom
+  width: 100%
+  text-align: right
+  font-size: 13px
+  line-height: 18px
+  a
+    color: $color-link
+  .blog-date
+    padding: 5px 0
+    color: transparentize($color-link,0.4)
+    float: right
+    display: block
+  .baklink
+    display: block
+    float: left
+    text-decoration: none
+    background: $big-blok-color-1
+    color: $color-background
+    padding: 5px 7px
+    line-height: 17px
+    white-space: nowrap
+    transition: background 300ms
+    &:hover
+      background: $small-blok-color-0
+
