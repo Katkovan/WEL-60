@@ -25,8 +25,13 @@
     <script type="text/javascript" src="./media/js/vendor/select2/select_2_locale.ru.js" ></script>
     <script type="text/javascript" src="./media/js/input_delay.js"></script>
     <script type="text/javascript" src="./media/js/modals.js"></script>
+
+    <script type="text/javascript" src="./media/js/jquery.validate.js"></script>   
+    <script type="text/javascript" src="./media/js/additional-methods.js"></script>  
+    <script type="text/javascript" src="./media/js/comments.js"></script>
+
     <script type="text/javascript" src="./media/js/forms.js"></script>
-    <script type="text/javascript" src="./media/js/filter_widget.js"></script>
+    <script type="text/javascript" src="./media/js/filter_widget.js"></script>   
     <script type="text/javascript" src="./media/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
     <script type="text/javascript" src="./media/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 
@@ -158,6 +163,142 @@
                         <div class="blog-date">Jan. 19, 2016</div>
                         <a class="baklink" href="/novosti/">← к списку новостей</a>
                     </div>
+                    <div class="cb-20"></div>
+                    <!-- Блок комментариев -->
+                    <div class="comments">
+                        <h2>Комментарии <span class="comments_count">48</span></h2>
+                        <div class="cb"></div>
+                        <div class="comment_item">
+                            <div class="comment_body">
+                                <div class="comment_title">
+                                    <img src="./media/images/user.png" alt="">
+                                    <span>Иван Иванов</span>
+                                    <span class="comment_date">5 Июля 2016</span>
+                                </div>
+                                <div class="comment_content">
+                                    <p>Заметные результаты с первого дня использования?</p>
+                                    <a href="javascript:void(0);" class="answer small-gray-button">Ответить</a>
+                                </div>
+                            </div>
+                            <div class="comment_reply">
+                                <div class="comment_body">
+                                    <div class="comment_title">
+                                        <img src="./media/images/moder.png" alt="">
+                                        <span>Менеджер по продажам</span>
+                                        <span class="comment_date">5 Июля 2016</span>
+                                    </div>
+                                    <div class="comment_content">
+                                        <p>Да, конечно!</p>
+                                        <a href="javascript:void(0);" class="answer small-gray-button">Ответить</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment_item">
+                            <div class="comment_body">
+                                <div class="comment_title">
+                                    <img src="./media/images/user.png" alt="">
+                                    <span>Екатерина</span>
+                                    <span class="comment_date">5 Июля 2016</span>
+                                </div>
+                                <div class="comment_content">
+                                    <p>Система для очищения кожи BioSkin WELSS WS 7027 применяется для ежедневного ухода за кожей лица</p>
+                                    <a href="javascript:void(0);" class="answer small-gray-button">Ответить</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment_item">
+                            <div class="comment_body">
+                                <div class="comment_title">
+                                    <img src="./media/images/user.png" alt="">
+                                    <span>Зоя Константиновна</span>
+                                    <span class="comment_date">5 Июля 2016</span>
+                                </div>
+                                <div class="comment_content">
+                                    <p>Изготовление коллагеновых фруктовых масок в домашних условиях</p>
+                                    <a href="javascript:void(0);" class="answer small-gray-button">Ответить</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment_item">
+                            <div class="comment_body">
+                                <div class="comment_title">
+                                    <img src="./media/images/user.png" alt="">
+                                    <span>Константин Константинопольский</span>
+                                    <span class="comment_date">5 Июля 2016</span>
+                                </div>
+                                <div class="comment_content">
+                                    <p>Многофункциональное высокотехнологичное устройство для поддержания красоты и здоровья глаз</p>
+                                    <a href="javascript:void(0);" class="answer small-gray-button">Ответить</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment_item">
+                            <div class="comment_body">
+                                <div class="comment_title">
+                                    <img src="./media/images/user.png" alt="">
+                                    <span>Марина</span>
+                                    <span class="comment_date">5 Июля 2016</span>
+                                </div>
+                                <div class="comment_content">
+                                    <p>Уникальный массажер с напылением из чистого золота для экспресс-лифтинга в домашних условиях</p>
+                                    <a href="javascript:void(0);" class="answer small-gray-button">Ответить</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination pag_comment">       
+                            <a class="to-start disabled">Назад</a>
+                            <a class="nav-item first num active" href="#">1</a>
+                            <a class="nav-item num" href="#">2</a>      
+                            <a class="nav-item num" href="#">3</a>      
+                            <a class="nav-item num" href="#">4</a>
+                            <a class="nav-item num" href="#">5</a>
+                            <a class="to-end" href="#">Вперёд</a>
+                        </div>
+                        <div class="cb"></div>
+                        <div  class="form commentform">
+                            <form enctype="multipart/form-data" method="POST" action="" id="comform">
+                                <h2>Написать комментарий</h2>
+                                <div class="inimg">
+                                    <img src="./media/images/user2.png" alt="avatar">
+                                </div>
+
+                                <div class="inblock">
+                                    <input name="name" type="text" class="form-control" id="name" placeholder="Имя">
+                                </div>
+
+                                <div class="inblock">
+                                    <input name="email" type="email" class="form-control" id="email" placeholder="E-mail">
+                                </div>  
+
+                                <div class="inblock_text">
+                                    Добавить фото
+                                </div>  
+
+                                <div class="inblock_but">
+                                    <input type="file" name="file" id="file-field" multiple="true" multiple accept="image/*,image/jpeg,image/png" />
+                                    <button class="small-gray-button" type="file">Обзор</button>
+                                </div>  
+                                <div class="cb"></div>
+                                <div class="inblock_photo">
+                                </div>
+
+                                <div class="inline left-out">
+                                    <textarea name="comment" rows="3" class="form-control" placeholder="Комментарий"></textarea>
+                                </div>  
+
+                                <div class="inblock_check checkbox">
+                                    <input name="subscription" type="checkbox" id="checkbox">
+                                    <label for="checkbox">Подписаться на комментарий</label>
+                                </div>  
+
+                                <div class="inblock_sub">
+                                    <button class="butt" type="submit" form="comform" name="1">Отправить</button>
+                                </div> 
+                            </form>
+                        </div>    
+                    </div>
+                    <!-- Конец блока комментариев -->
                 </div>
             </div>
             <div class="cb"></div>
